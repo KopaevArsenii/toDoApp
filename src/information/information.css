@@ -1,0 +1,20 @@
+.information__wrapper{
+    width: 960px;
+    height: 130px;
+    background-color:cyan;
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-left: 40px;
+    vertical-align: middle;
+
+}
+.information__tasks{
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    font-size: 40px;
+}
+.information__special-tasks{
+    font-family: 'Noto Sans', sans-seri;
+    margin: 0;
+    font-size: 25px;
+}
