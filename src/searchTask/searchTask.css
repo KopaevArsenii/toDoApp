@@ -7,7 +7,7 @@
     padding-right: 40px;
 }
 .search-task__input{
-    width: 800px;
+    width: 930px;
     height: 30px;
     border-radius: 5px;
     border: 0px;   
@@ -20,15 +20,6 @@ input:focus{
 }
 ::placeholder {
     font-family: 'Noto Sans', sans-serif;
-}
-.search-task__button{
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: cyan;
-    border: 0px;   
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 10px;
 }
 .search-task__filters{
     margin-top: 15px;

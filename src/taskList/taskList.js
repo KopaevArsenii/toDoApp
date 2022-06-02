@@ -1,11 +1,19 @@
 import './taskList.css'
 
-const TaskList = () => {
+
+const TaskList = ({cases}) => {
+    const elements = cases.map(item => {
+        return (
+            <div className='task-list__item'>
+                <span className="task-list__item-text">{item.text}</span>
+                <button className='task-list__item-button'>delete</button>
+                <button className='task-list__item-button'>special</button>
+            </div>
+        )
+    })
     return(
         <div className='task-list__wrapper'>
-            <div className='task-list__item'>
-
-            </div>
+            {elements}
         </div>
     )
 }
