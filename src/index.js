@@ -42,13 +42,12 @@ const App = () => {
   }
 
   function onSpecialTask(id){
-    /* setData(data => [
+    setData(data =>
       data.map(item => {
-        if (item.id == id) {
+        if (item.id == id){
           return {...item, specail: !item.specail}
         } else return item;
-      })
-    ]) */
+      }))
   }
 
   function addNewCase(text){
