@@ -10,28 +10,9 @@ import AddTask from './addTask/addTask';
 import './index.css';
 
 const App = () => {
-  const [data, setData] = useState([
-    {
-      text: 'first case',
-      specail: false,
-      id: (+new Date + 1).toString(16)
-    },
-    {
-      text: 'second case',
-      specail: false,
-      id: (+new Date + 2).toString(16)
-    },
-    {
-      text: 'third case',
-      specail: true,
-      id: (+new Date + 3).toString(16)
-    },
-    {
-      text: 'pizda case',
-      specail: true,
-      id: (+new Date + 4).toString(16)
-    }
-  ]);
+  const [specailState, setSpecialState] = useState(false);
+  const [string, setString] = useState('');
+  const [data, setData] = useState([]);
 
   function onDeleteTask(id){
     let returnArr = data.filter(item => {
@@ -49,16 +30,36 @@ const App = () => {
         } else return item;
       }))
   }
+  function showSpecialCases(){
+    setSpecialState(true);
+  }
+  function showAllCases(){
+    setSpecialState(false);
+  }
 
   function addNewCase(text){
     setData(data => [...data, {text: text, specail: false, id: (+new Date).toString(16)}])
   }
+
+  function onFilter(elements, string){
+    if (string.length === 0) return elements;
+    
+    return elements.filter(item => {
+      return item.text.toLowerCase().indexOf(string.toLowerCase()) > -1;
+    }) 
+  }
+
+  function updateFilter(request){
+    setString(request);
+  }
+
+  const visiableDate = onFilter(data, string);
   
   return(
     <>
       <Information length={data.length} specailLenght={data.filter((item) => item.specail === true).length}/>
-      <SearchTask />
-      <TaskList cases={data} onDeleteTask={onDeleteTask} onSpecialTask={onSpecialTask}/>
+      <SearchTask showSpecialCases={showSpecialCases} showAllCases={showAllCases} updateFilter={updateFilter} />
+      <TaskList cases={visiableDate} onDeleteTask={onDeleteTask} onSpecialTask={onSpecialTask} specailState={specailState}/>
       <AddTask addNewCase={addNewCase}/>
     </>
   )

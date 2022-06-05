@@ -1,0 +1,23 @@
+.task-list__item{
+    width: 990px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.task-list__item-text{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    width: 800px;
+}
+.task-list__item-special-text{
+    color: yellow;
+}
+.task-list__item-button{
+    float: right;
+    height: 25px;
+    border: none;
+    margin-right: 20px;
+    background-color: cyan;
+    border-radius: 5px;
+}

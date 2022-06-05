@@ -1,16 +1,27 @@
+import ListItem from '../listItem/listItem'
+
 import './taskList.css'
 
 
-const TaskList = ({cases, onDeleteTask, onSpecialTask}) => {
-    const elements = cases.map(item => {
-        return (
-            <div className='task-list__item' key={item.id}>
-                <span className="task-list__item-text">{item.text}</span>
-                <button className='task-list__item-button' onClick={() => onDeleteTask(item.id)}>delete</button>
-                <button className='task-list__item-button' onClick={() => onSpecialTask(item.id)}>special</button>
-            </div>
-        )
-    })
+const TaskList = ({cases, onDeleteTask, onSpecialTask, specailState}) => {
+    let elements;
+    if (specailState == false){
+        elements = cases.map(item => {
+            return (
+                <>
+                    <ListItem onDeleteTask={onDeleteTask} onSpecialTask={onSpecialTask} item={item} />
+                </>
+            )
+        })
+    } else {
+        elements = cases.map(item => {
+            if (item.specail) return (
+                <>
+                    <ListItem onDeleteTask={onDeleteTask} onSpecialTask={onSpecialTask} item={item} />
+                </>
+            )
+        })
+    }
     return(
         <div className='task-list__wrapper'>
             {elements}
