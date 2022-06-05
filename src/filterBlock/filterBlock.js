@@ -1,6 +1,6 @@
-import './searchTask.css'
+import './filterBlock.css';
 
-const SearchTask = ({showSpecialCases, showAllCases, updateFilter}) => {
+const Filter = ({showSpecialCases, showAllCases, updateFilter}) => {
     return(
         <div className='search-task__wrapper'>
             <input type="text" placeholder='Type here to search your case' className='search-task__input' onChange={(e) => updateFilter(e.target.value)}/>
@@ -12,4 +12,4 @@ const SearchTask = ({showSpecialCases, showAllCases, updateFilter}) => {
     )
 }
 
-export default SearchTask;
+export default Filter;
