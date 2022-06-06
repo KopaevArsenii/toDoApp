@@ -7,6 +7,10 @@ const AddTask = ({addNewCase}) => {
 
     function createNewTask(text){
         if (text === '') return;
+        if (text.length > 70) {
+            alert('Too large!');
+            return;
+        }
         addNewCase(value);
         setValue(''); 
     }

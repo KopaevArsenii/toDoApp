@@ -64,7 +64,7 @@ const App = () => {
   function onSpecialTask(id){
     setData(data =>
       data.map(item => {
-        if (item.id == id){
+        if (item.id === id){
           return {...item, special: !item.special}
         } else return item;
       }))
