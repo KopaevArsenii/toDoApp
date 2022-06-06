@@ -1,9 +1,9 @@
 .task-list__item{
-    width: 990px;
+    width: 960px;
     height: 40px;
     margin: 0 auto;
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 40px;
 }
 .task-list__item-text{
     font-family: 'Noto Sans', sans-serif;
@@ -11,13 +11,44 @@
     width: 800px;
 }
 .task-list__item-special-text{
-    color: yellow;
+    color: #e9bb58;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    width: 800px;
 }
-.task-list__item-button{
+.task-list__item-button-delete{
+    padding: 0;
     float: right;
     height: 25px;
+    width: 25px;
+    border: none;
+    margin-right: 40px;
+    background-color: #80a3e0;
+    border-radius: 5px;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.task-list__item-button-special{
+    padding: 0;
+    float: right;
+    height: 25px;
+    width: 25px;
     border: none;
     margin-right: 20px;
-    background-color: cyan;
+    background-color: #80a3e0;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e9bb58;
+}
+.task-list__item-button-special:hover{
+    background-color: #e9bb58;
+    color: white;
+}
+.task-list__item-button-delete:hover{
+    background-color: red;
+    color:white;
 }

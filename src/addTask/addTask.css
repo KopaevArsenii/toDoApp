@@ -1,16 +1,26 @@
 .add-task__wrapper{
-    width: 1000px;
+    width: 920px;
     height: 50px;
     margin-left: 35px;
     margin-right: 35px;
-    padding-top: 10px;
+    padding-top: 25px;
     margin: 0 auto;
     margin-top: 25px;
+    background-color:#80a3e0;
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
 }
 .add-task__input{
-    width: 930px;
+    width: 860px;
     height: 30px;
-    border: none;
+    border-radius: 5px;
+    border: none;   
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 12px;
+    padding: 0;
+    text-indent: 5px;
 }
 .add-task__button{
     background-color: cyan;
@@ -19,7 +29,15 @@
     height: 30px;
     border-radius: 5px;
     width: 50px;
+    border: 2px solid white;
+    background-color: #80a3e0;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
 }
-:focus{
+.add-task__button:hover{
+    background-color: white;
+    color: #80a3e0;
+}
+input:focus{
     border:none;
 }

@@ -1,11 +1,14 @@
 .information__wrapper{
     width: 960px;
     height: 130px;
-    background-color:cyan;
+    background-color:#80a3e0;
     margin: 0 auto;
     padding-top: 45px;
     padding-left: 40px;
     vertical-align: middle;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
 
 }
 .information__tasks{
