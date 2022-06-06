@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Information from './information/information';
 import Filter from './filterBlock/filterBlock';
@@ -13,6 +13,20 @@ const App = () => {
   const [showSpecial, setShowSpecial] = useState(false);
   const [term, setTerm] = useState('');
   const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('data'));
+    if (data){
+      setData(data);
+    }
+  }, []);
+  
+  useEffect(() => {
+    if (data?.length){
+      localStorage.setItem('data', JSON.stringify(data));
+    }
+  }, [data]);
+
 
   /* Filter block */
   /* Buttons */
