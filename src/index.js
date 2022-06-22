@@ -25,6 +25,9 @@ const App = () => {
     if (data?.length){
       localStorage.setItem('data', JSON.stringify(data));
     }
+    if (data.length==0){
+      localStorage.clear();
+    }
   }, [data]);
 
 
